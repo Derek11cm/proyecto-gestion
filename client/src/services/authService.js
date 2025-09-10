@@ -14,8 +14,17 @@ const login = async (username, password) => {
   return response.data;
 };
 
-// We can add the register function here later if needed
+const register = async (username, password) => {
+  // No necesitamos un token para registrar, por eso usamos axios directamente
+  const response = await axios.post(`${API_URL}/register`, {
+    username,
+    password,
+  });
+  return response.data;
+};
 
 export default {
   login,
+  register, // <-- Exportar la nueva función
 };
+// We can add the register function here later if needed

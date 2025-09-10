@@ -1,6 +1,6 @@
 // In src/components/clientes/ClienteForm.jsx
 import { useState } from 'react';
-import clienteService from '../services/clienteService';
+import clienteService from '../../services/clienteService';
 
 export default function ClienteForm({ onSuccess }) {
   const [nombres, setNombres] = useState('');

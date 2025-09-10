@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import clienteService from '../services/clienteService';
-import Modal from '../components/Modal';
-import ClienteForm from '../components/ClienteForm';
+import Modal from '../components/ui/Modal';
+import ClienteForm from '../components/clientes/ClienteForm';
 import { useAuth } from '../context/AuthContext';
 
 export default function ClientsPage() {
