@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GestionParqueo.Domain\GestionParqueo.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
