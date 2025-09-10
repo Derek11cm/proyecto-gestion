@@ -1,12 +1,14 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using GestionParqueo.Application.Features.Habitaciones.Commands;
 using GestionParqueo.Application.Features.Habitaciones.Queries;
-using GestionParqueo.Application.Features.Habitaciones.Commands;
-using System.Threading.Tasks;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace GestionParqueo.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class HabitacionesController : ControllerBase

@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using GestionParqueo.Application.Features.Clientes.Queries;
 using System.Threading.Tasks;
-using GestionParqueo.Application.Features.Clientes.Commands; // <-- Agrega este using
+using GestionParqueo.Application.Features.Clientes.Commands;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestionParqueo.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ClientesController : ControllerBase

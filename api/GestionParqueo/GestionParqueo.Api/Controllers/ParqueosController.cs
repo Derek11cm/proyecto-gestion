@@ -1,11 +1,13 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using GestionParqueo.Application.Features.Parqueos.Commands;
 using GestionParqueo.Application.Features.Parqueos.Queries;
-using GestionParqueo.Application.Features.Parqueos.Commands;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace GestionParqueo.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ParqueosController : ControllerBase
